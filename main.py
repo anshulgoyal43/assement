@@ -4,14 +4,17 @@ import requests
 import os
 import json
 from datetime import datetime
-from dotenv import load_dotenv
 
-load_dotenv()
 
 app = Flask(__name__)
 
-storage_client = storage.Client()
+# Initialize storage client with explicit project ID
+storage_client = storage.Client(project='assement-446515')
 bucket = storage_client.bucket('uniquebuket')
+
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"message": "Weather API is running"}), 200
 
 @app.route('/store-weather-data', methods=['POST'])
 def store_weather_data():

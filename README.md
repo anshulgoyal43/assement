@@ -7,8 +7,8 @@ This project is a Flask-based API that fetches weather data from the Open-Meteo 
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/anshulgoyal43/assement
+   cd assement
    ```
 
 2. **Create a virtual environment:**
